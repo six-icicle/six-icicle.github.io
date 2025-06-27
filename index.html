@@ -1,7 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundane Marvels - Extraordinarily Ordinary Things</title>
+    
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Salesforce Data Cloud Web SDK - will be added in next step -->
+    <!-- <script src="https://c360a.salesforce.com/..." defer></script> -->
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <!-- Navigation header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>Mundane Marvels</h1>
+                <p class="tagline">Extraordinarily ordinary things for delightfully normal people</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#subscription">Subscribe</a></li>
+                <li><a href="#cart" class="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Hero section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Welcome to the World of Extraordinary Ordinary</h2>
+                <p>We celebrate the beauty in everyday mundane objects. Each product is carefully curated to bring joy to your delightfully normal life.</p>
+                <button class="cta-button" onclick="scrollToProducts()">Shop Mundane Marvels</button>
+            </div>
+        </section>
+
+        <!-- Featured products section -->
+        <section id="products" class="products">
+            <div class="container">
+                <h2>Our Curated Collection</h2>
+                <div class="product-grid">
+                    <!-- Products will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles section -->
+        <section id="articles" class="articles">
+            <div class="container">
+                <h2>Enlightening Articles</h2>
+                <div class="articles-grid">
+                    <!-- Articles will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Subscription section -->
+        <section id="subscription" class="subscription">
+            <div class="container">
+                <h2>Monthly Mundane Box</h2>
+                <p>Get curated ordinary items with extraordinary marketing delivered monthly.</p>
+                <div class="subscription-options">
+                    <div class="subscription-plan">
+                        <h3>Basic Mundane</h3>
+                        <p class="price">$19.99/month</p>
+                        <p>3-4 delightfully ordinary items</p>
+                        <button class="subscribe-btn" data-plan="basic">Subscribe</button>
+                    </div>
+                    <div class="subscription-plan featured">
+                        <h3>Premium Mundane</h3>
+                        <p class="price">$39.99/month</p>
+                        <p>5-7 extraordinarily ordinary items + exclusive articles</p>
+                        <button class="subscribe-btn" data-plan="premium">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Simple cart modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <span class="cart-close">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <strong>Total: $<span id="cart-total">0.00</span></strong>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Mundane Marvels. All rights reserved. Proudly ordinary since today.</p>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
